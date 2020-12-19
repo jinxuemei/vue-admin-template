@@ -69,8 +69,12 @@ export default {
         });
       });
     },
+
     del(row) {
-      delOneLevel({ levelId: row.levelId }).then((res) => {
+      delOneLevel({ 
+        levelId: row.levelId 
+        }).then((res) => {
+        console.log(row.levelId);
         console.log(res);
         this.getData();
       });
