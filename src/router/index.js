@@ -58,13 +58,13 @@ export const constantRoutes = [
   {
     path: '/',
     component: Layout,
-    // redirect: '/info',
-    
+    redirect: '/info',
+ 
     children: [{
       path: 'info',
       name: 'Info',
       component: () => import('@/views/info/index'),
-      meta: { title: '信息管理', icon: 'from' }
+      meta: { title: '信息管理', icon: 'form' }
     }]
   },
  
@@ -76,18 +76,18 @@ export const constantRoutes = [
       path: 'level',
       name: 'Level',
       component: () => import('@/views/level/index'),
-      meta: { title: '等级管理', icon: 'from' }
+      meta: { title: '等级管理', icon: 'form' }
     }]
   },
   {
     path: '/address',
     component: Layout,
-    // redirect: '/info',
+    redirect: '/address',
     children: [{
       path: 'address',
       name: 'Address',
       component: () => import('@/views/address/index'),
-      meta: { title: '地址管理', icon: 'from' }
+      meta: { title: '地址管理', icon: 'form' }
     }]
   },
 
